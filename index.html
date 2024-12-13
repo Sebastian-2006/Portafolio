@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Master_Cartoonist.jpg">
+    <title>Portafolio</title>
+</head>
+<body>
+ 
+  <header class="INICIO">
+    <nav class="MENU">
+
+      <button class="menu-btn" id="menu-btn">&#9776;</button>
+
+      <div id="off-canvas" class="off-canvas">
+        <button class="close-btn" id="close-btn">&times;</button>
+        <ul class="off-canvas-links">
+          <h2>MENU</h2>
+          <li><a href="#QuienSoy">Sobre mí</a></li>
+        <li><a href="#proyecto">Proyectos</a></li>
+        <li><a href="#apps">Apps</a></li>
+         <h2>REDES SOCIALES</h2>
+            <li><a href="https://www.tiktok.com/@master_cartoonist?_t=ZM-8s6rCqD4Tn4&_r=1" target="_blank">Tik Tok</a></li>
+            <li><a href="https://www.instagram.com/master.cartoonist/profilecard/?igsh=dTk1OTh2bmJydzFt target="target="_blank">Instagram</a></li>
+            <li><a href=" https://wa.me/qr/BKLMODKMY5S4C1 ="target="_blank">Whatsapp</a></li>
+        </ul>
+      </div>
+
+      <div class="logo">PORTAFOLIO</div>
+
+    </nav>
+
+    <footer id="stroke">
+
+      <div class="LED">
+        <svg viewBox="0 0 600 200" class="svg-stroke">
+          <text x="50%" y="50%" text-anchor="middle">MASTER CARTOONIST</text>
+        </svg>
+      </div>
+    </footer>
+
+  </header>
+
+  <section id="QuienSoy" class="QuienSoy">
+  <h2>Sobre mí</h2>
+   <div class="Contenedor">
+      <div class="imagen">
+        <img src="Perfil.jpg" alt="Johan Sebastian Aponte Diaz" class="perfil-img">
+      </div>
+      <div class="HojaDeVida">
+        <h1>johan Sebastian Aponte Diaz</h1>
+        <p>Producción de multimedia</p>
+        <p>Soy productor multimedial, En proceso de aprendizaje en fotografía, programación y edición. Manejo a los programas de Adobe como Ilustrator, After effects, Photoshop y Visual code. 
+        </p>
+        <h2>Experiencia Laboral</h2>
+        <p>Habilidades: Tener facilidad para trabajar en equipo, Ser empático, Conocimientos básicos en algunos programas, soy creativo y tengo habilidades técnicas
+        </p>
+      </div>
+   </div>
+      <div class="video-container">
+        <video class="video" autoplay muted loop>
+          <source src="lv_0_20240306133850.mp4" type="video/mp4">
+        </video>
+      </div>
+  </section>
+
+  <section id="proyecto" class="proyecto">
+    <h2>Proyectos Destacados</h2>
+    <div class="proyecto-grid">
+      <div class="proyecto-card">
+        <a href="target="target="_blank"><img src="ADOBE.avif" alt="Adobe Illustrator"></a>
+        <h3>Adobe Illustrator</h3>
+      </div>
+      <div class="proyecto-card">
+        <a href="target="target="_blank"><img src="AFTER.avif" alt="After Effect"></a>
+        <h3>After Effect</h3>
+      </div>
+      <div class="proyecto-card">
+      <a href="https://www.dropbox.com/scl/fi/tzyrofcwib6rnuodi81bp/Trabajos-de-Visual-Studio-Code.pdf?rlkey=0v3hx638gbxlac2xf0n9b9tv8&st=5zumwqnl&dl=0 target="target="_blank"><img src="VISUAL.Default" alt="Visual Studio Code"></a>
+        <h3>Visual Studio Code</h3>
+      </div>
+      <div class="proyecto-card">
+        <a href="https://www.dropbox.com/scl/fo/smli5cis2flz0kuf5avkq/AFivmA0U1ALniB7KtNBMWiw?rlkey=wmpcxzjzra8e8jk4f2cmabntx&st=gmhkyd7h&dl=0 target="target="_blank"><img src="AUDIO.avif" alt="Audiovisual"></a>
+          <h3>Audiovisual</h3>
+        </div>
+    </div>
+  </section>
+
+  <section id="apps" class="apps">
+    <div class="container">
+      <h2>Apps que uso</h2>
+      <div class="cuadrado">
+        <div class="tarjeta">
+          <div class="Cuadro-image">
+            <img src="AI.jpg" alt="AI">
+          </div>
+          <h3>Adobe Illustrator</h3>
+        </div>
+        <div class="tarjeta">
+          <div class="Cuadro-image">
+            <img src="AE.png" alt="AE">
+          </div>
+          <h3>After Effects</h3>
+        </div>
+        <div class="tarjeta">
+          <div class="Cuadro-image">
+            <img src="VSC.webp" alt="VSC">
+          </div>
+          <h3>Visual Studio Code</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <h2>&copy; 2024 Mi Portafolio</h2>
+  </footer>
+
+  <script>
+    
+    const menuBtn = document.getElementById("menu-btn");
+    const closeBtn = document.getElementById("close-btn");
+    const offCanvas = document.getElementById("off-canvas");
+
+    
+    menuBtn.addEventListener("click", () => {
+      offCanvas.classList.add("active"); 
+    });
+
+    
+    closeBtn.addEventListener("click", () => {
+      offCanvas.classList.remove("active"); 
+    });
+
+  
+    document.addEventListener("click", (event) => {
+      if (!offCanvas.contains(event.target) && !menuBtn.contains(event.target)) {
+        offCanvas.classList.remove("active");
+      }
+    });
+  </script>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const options = {
+      threshold: 0.2,
+    };
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, options);
+  
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+  </script>
+   <script>document.addEventListener("DOMContentLoaded", function() {
+    const text = document.querySelector("text");
+    let offset = 7000;
+    const animateStroke = () => {
+      if (offset >= 0) {
+        text.style.strokeDashoffset = offset;
+        offset -= 3; 
+        requestAnimationFrame(animateStroke);
+      }
+    };
+    
+    animateStroke();
+  });
+
+</script>
+
+</body>
+</html>
