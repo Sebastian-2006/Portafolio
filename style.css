@@ -1,0 +1,405 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+#logo{
+
+  width: 10%;
+  height: 10em;
+}
+
+a {
+  text-decoration: none;
+}
+.MENU {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.MENU .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffd700;
+  text-transform: uppercase;
+}
+
+.MENU-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.MENU-links li {
+  padding: 5px 0;
+}
+
+.MENU-links a {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.MENU-links a:hover {
+  color: #ffd700;
+}
+.LED {
+
+  align-items: center;
+  margin-top: 2em;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 80px;
+  
+  
+}
+
+
+.LED .svg-stroke {
+ width: 100%;
+ max-width: 150%;
+}
+
+.LED text {
+ font-family: Arial, sans-serif;
+ font-size: 2rem;
+ fill: none;
+ stroke: #d0a114;
+ stroke-width: 2px;
+ stroke-dasharray: 1000; 
+ stroke-dashoffset: 1000; 
+}
+
+
+.QuienSoy {
+  padding: 40px 20px;
+  background-color: #333;
+  margin-top: 50px;
+  text-align: center;
+  border-bottom: 2px solid #ffd700;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.QuienSoy.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.QuienSoy h2, .QuienSoy h1 {
+  font-size: 2rem;
+  color: #ffd700;
+  margin-bottom: 15px;
+}
+
+.Contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.imagen {
+  width: 180px; 
+  height: 180px; 
+  border-radius: 50%; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #ffd700; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+  background-color: #333; 
+}
+
+.perfil-img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+
+.HojaDeVida {
+  flex: 1;
+  text-align: left;
+}
+
+.HojaDeVida p, .HojaDeVida h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+
+.proyecto {
+  padding: 40px 20px;
+  background-color: #1e1e1e;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.proyecto.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.proyecto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.proyecto-card {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.proyecto-card img {
+  width: 100%;
+  height: 20em;
+  border-radius: 5px;
+}
+
+.proyecto-card h3 {
+  margin-top: 15px;
+  color: #ffd700;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.apps {
+  padding: 40px 20px;
+  background-color: #333;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.apps.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.cuadrado {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.Cuadro-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+  color: #ffd700;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+.close-btn {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffd700;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.footer a {
+  color: #ffd700;
+}
+
+.footer a:hover {
+  color: #d4af37;
+}
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #ffd700;
+  cursor: pointer;
+  display: none;
+  display: block;
+}
+
+.off-canvas {
+  position: fixed;
+  top: 0;
+  left:-100%;
+  width: 300px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.off-canvas.active {
+  left: 0;
+}
+
+.off-canvas-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.off-canvas-links li {
+  margin: 20px 0;
+}
+
+.off-canvas-links a {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+.off-canvas h2{
+
+  color: #ffd700;
+
+}
+.video-container {
+  position: relative;
+  width: 100%; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  overflow: hidden; 
+  border-radius: 10px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.video {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+}
+
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); 
+  pointer-events: none; 
+}
+@media (max-width: 768px) {
+  .MENU {
+    flex-direction: row;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .INICIO h1 {
+    font-size: 2rem;
+  }
+
+  .INICIO p {
+    font-size: 1rem;
+  }
+
+  .Contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .proyecto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cuadrado {
+    grid-template-columns: 1fr;
+  }
+  .imagen {
+    width: 140px;
+    height: 140px;
+    border: 4px solid #ffd700; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  
+}
+}
+
+@media (max-width: 480px) {
+  .INICIO h1 {
+    font-size: 1.5rem;
+  }
+
+  .INICIO p {
+    font-size: 0.9rem;
+  }
+
+  .proyecto-card h3, .tarjeta h3 {
+    font-size: 1rem;
+  }
+
+  .Cuadro-image img {
+    width: 80px;
+    height: 80px;
+  }
+  .imagen {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #ffd700; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
+}
+}
